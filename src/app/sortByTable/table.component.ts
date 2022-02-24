@@ -27,12 +27,13 @@ export class TableComponent implements OnInit {
     },
   ];
   ngOnInit() {}
-  sortOn() {
-    this.data = this.data.sort((order, a, b) => {
+  sortOn(order) {
+    this.data = this.data.sort((a, b, order) => {
       let dateA: Date = new Date(a.date),
         dateB: Date = new Date(b.date);
       if ((order = 'asc')) {
         return dateA - dateB;
+        this.order = 'asc';
       } else if ((order = 'desc')) {
         return dateB - dateA;
       }
