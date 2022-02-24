@@ -1,18 +1,1 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th><a (click)="sortOn('CLOSE')">Ask Price</a></th>
-      <th><a (click)="sortOn('tax_diff')">Tax Value</a></th>
-      <th><a (click)="sortOn('MarketCap')">Est. Value</a></th>
-      <th><a (click)="sortOn()">date</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of data">
-      <td>{{ item.address }}</td>
-      <td>{{ item.topic }}</td>
-      <td>{{ item.homework }}</td>
-      <th scope="row">{{ item.date | date: 'dd.MM.yyyy H:mm' }}</th>
-    </tr>
-  </tbody>
-</table>
+<my-table></my-table>
