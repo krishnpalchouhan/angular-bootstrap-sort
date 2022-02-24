@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   ];
   ngOnInit() {}
   sortOn() {
-    this.lessons = this.lessons.sort((order, a, b) => {
+    this.data = this.data.sort((order, a, b) => {
       let dateA: Date = new Date(a.date),
         dateB: Date = new Date(b.date);
       if ((order = 'asc')) {
@@ -38,6 +38,6 @@ export class AppComponent implements OnInit {
         return dateB - dateA;
       }
     });
-    console.log(this.lessons);
+    console.log(this.data);
   }
 }
